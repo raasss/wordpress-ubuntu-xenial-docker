@@ -1,0 +1,38 @@
+version: '3.5'
+
+networks:
+  private:
+    driver: bridge
+
+services:
+  db:
+    image: raasss/mariadb:ubuntu-xenial-latest
+    networks:
+      - private
+    ports:
+      - "13306:3306"
+    environment:
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
+
+  php:
+    image: raasss/php-fpm:ubuntu-xenial-latest
+    networks:
+      - private
+    ports:
+      - "19000:9000"
+    volumes:
+      - ./src:/var/www/html
+
+  web:
+    image: raasss/apache:ubuntu-xenial-latest
+    networks:
+      - private
+    ports:
+      - "10080:80"
+      - "10443:443"
+    environment:
+     - PHP_FPM_SERVER=php
+    volumes:
+      - ./src:/var/www/html:ro
