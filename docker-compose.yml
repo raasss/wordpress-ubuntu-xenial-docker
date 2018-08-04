@@ -23,7 +23,9 @@ services:
     ports:
       - "19000:9000"
     volumes:
-      - ./src:/var/www/html
+      - type: bind
+        source: ./src
+        target: /var/www/html
 
   web:
     image: raasss/apache:ubuntu-xenial-latest
@@ -35,4 +37,7 @@ services:
     environment:
      - PHP_FPM_SERVER=php
     volumes:
-      - ./src:/var/www/html:ro
+      - type: bind
+        source: ./src
+        target: /var/www/html
+        read_only: true
