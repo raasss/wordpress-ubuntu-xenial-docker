@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
-set -xe
+set -e
+
+source include/create-env-file.sh
 
 docker-compose start
-docker-compose logs -f

@@ -1,5 +1,3 @@
-#!/bin/sh
-
-set -x
+#!/bin/bash
 
 docker-compose stop

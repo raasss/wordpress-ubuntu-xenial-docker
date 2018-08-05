@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-set -ex
+set -e
 
 if [ ! -d db-backup ]; then
   mkdir -v db-backup

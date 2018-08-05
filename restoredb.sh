@@ -1,5 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 
-set -ex
+set -e
 
 cat db-backup/wordpress.sql | docker-compose exec -T -u root db mysql wordpress

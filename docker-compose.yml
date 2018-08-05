@@ -22,6 +22,9 @@ services:
       - private
     ports:
       - "19000:9000"
+    environment:
+      - DOCKER_RUN_AS_UID
+      - DOCKER_RUN_AS_GID
     volumes:
       - type: bind
         source: ./src
