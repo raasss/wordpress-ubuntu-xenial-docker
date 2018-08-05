@@ -49,6 +49,12 @@ Print status of all services.
 ### ```./down.sh``` ###
 Stop all services **NOT** preserving data on disk.
 
+### ```./wp.sh``` ###
+Execute wp cli inside ```php``` service.
+
+### ```./pull-new-images.sh``` ###
+Check and pull for new docker images
+
 ## FAQ ##
 
 ### Where shoud I put my WordPress code? ###
