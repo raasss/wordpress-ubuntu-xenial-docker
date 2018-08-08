@@ -1,6 +1,6 @@
 # About #
 
-This is project template for WordPress development using Docker. Used services are: Apache, PHP-FPM and Mariadb. All docker images are based on standard ubuntu-xenial.
+This is project template for WordPress development using Docker. Used services are: Apache, PHP-FPM and Mariadb. All docker images are based on standard ubuntu-xenial image. Developed code with this environment should work on any hardware or virtual server running standard ubuntu xenial version.
 
 ## Quickstart ##
 
