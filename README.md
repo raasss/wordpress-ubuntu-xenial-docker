@@ -36,10 +36,10 @@ Downloads required docker images if not cached already and starts 3 services (ww
 Start trailing logs of all services. Stop trailing with ```ctlr + c```.
 
 ### ```./stop.sh``` ###
-Stop all services preserving data on disk. This can be used save system resources while working on some other project.
+Stop all services preserving data on disk. This can be used to save system resources while working on some other project.
 
 ### ```./start.sh``` ###
-Start all services.
+Start all services if they were stopped with ```./stop.sh```.
 
 ### ```./backupdb.sh``` ###
 Backup your database locally to ```db-backup``` directory. After that you should decide if you will git version it or git ignore it.
@@ -51,7 +51,7 @@ Restore database from ```db-backup``` directory.
 Print status of all services.
 
 ### ```./down.sh``` ###
-Stop all services **NOT** preserving data on disk.
+Stop all services and destroy relevant dockers. Because dockers are destroyed data in your database **will be DESTROYED** too. It's recommended to run ```./backupdb.sh``` before this command.
 
 ### ```./wp.sh``` ###
 Execute wp cli inside ```php``` service.
