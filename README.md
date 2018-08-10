@@ -25,9 +25,11 @@ cd <your_project_name>
 ./logs.sh
 ```
 
-5. Open [http://0.0.0.0:10080](http://0.0.0.0:10080) in your favourite Internet browser
+5. Open [http://localhost:10080](http://localhost:10080) in your favorite Internet browser
 
 ## Helper scripts ##
+
+```*.sh``` scripts are for Linux and Mac, ```*.bat``` scripts are for Windows.
 
 ### ```./up.sh``` ###
 Downloads required docker images if not cached already and starts 3 services (www, php, mariadb)
