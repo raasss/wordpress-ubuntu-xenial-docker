@@ -1,3 +1,3 @@
-@echo on
+@echo off
 
 docker-compose ps
