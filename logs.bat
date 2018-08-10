@@ -1,3 +1,3 @@
 @echo off
 
-start docker-compose logs -f
+docker-compose logs -f

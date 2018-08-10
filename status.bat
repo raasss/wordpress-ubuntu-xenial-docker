@@ -1,3 +1,3 @@
 @echo on
 
-start docker-compose ps
+docker-compose ps

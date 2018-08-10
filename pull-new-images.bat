@@ -1,3 +1,3 @@
 @echo off
 
-start docker-compose pull
+docker-compose pull

@@ -1,3 +1,3 @@
 @echo off
 
-start docker-compose start
+docker-compose start
